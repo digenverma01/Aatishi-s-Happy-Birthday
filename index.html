@@ -11,6 +11,18 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
+	<audio id="birthday-audio" loop>
+  <source src="music/happy-birthday.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const audio = document.getElementById("birthday-audio");
+
+  // Screen ke kahin bhi tap ya click karne pe music chale
+  document.body.addEventListener("click", function () {
+    audio.play();
+  }, { once: true }); // Sirf ek baar chalega
+</script>
 	
     <div id="wrapper">
         <div class="flag__birthday">
