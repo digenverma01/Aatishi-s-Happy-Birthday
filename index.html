@@ -15,11 +15,57 @@
   <source src="music/happy-birthday.mp3" type="audio/mpeg">
 </audio>
 
-<button
-  onclick="document.getElementById('birthday-audio').play()"
-  class="bg-gradient-to-r from-pink-500 to-red-400 hover:from-red-600 hover:to-pink-600 text-white font-bold py-3 px-6 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out mt-6 animate-bounce"
->
-  🎵 Tap to Play Music 🎶
+<style>
+  .heart-button {
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    width: 70px;
+    height: 60px;
+    position: relative;
+    transform: rotate(-45deg);
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6);
+    border: none;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .heart-button::before,
+  .heart-button::after {
+    content: "";
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+    border-radius: 50%;
+    position: absolute;
+    width: 70px;
+    height: 70px;
+  }
+
+  .heart-button::before {
+    top: -35px;
+    left: 0;
+  }
+
+  .heart-button::after {
+    left: 35px;
+    top: 0;
+  }
+
+  .heart-icon {
+    transform: rotate(45deg);
+    font-size: 24px;
+    color: white;
+    position: absolute;
+    top: 15px;
+    left: 23px;
+    pointer-events: none;
+  }
+
+  .heart-button:hover {
+    scale: 1.1;
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.8);
+  }
+</style>
+
+<button class="heart-button" onclick="document.getElementById('birthday-audio').play()">
+  <span class="heart-icon">🎵</span>
 </button>
     <div id="wrapper">
         <div class="flag__birthday">
