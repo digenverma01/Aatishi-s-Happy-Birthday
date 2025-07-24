@@ -11,9 +11,13 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 </head>
 <body>
-	<audio autoplay loop>
+	<audio id="birthday-audio" loop>
   <source src="music/happy-birthday.mp3" type="audio/mpeg">
 </audio>
+
+<button onclick="document.getElementById('birthday-audio').play()" style="padding: 10px 20px; font-size: 18px; margin-top: 20px;">
+  🎵 Tap to Play Music
+</button>
     <div id="wrapper">
         <div class="flag__birthday">
             <img src="./images/1.png" alt="" width="350" class="flag__left">
