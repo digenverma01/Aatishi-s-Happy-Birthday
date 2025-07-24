@@ -16,16 +16,15 @@
 </audio>
 
 <style>
-  .heart-button {
+  ..perfect-heart-button {
   position: fixed;
   bottom: 30px;
   right: 25px;
   width: 60px;
   height: 54px;
-  background-color: #ff4d6d;
-  transform: rotate(-45deg);
+  background-color: red;
   border-radius: 50% 50% 0 0;
-  box-shadow: 0 4px 12px rgba(255, 77, 109, 0.6);
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.6);
   cursor: pointer;
   z-index: 1000;
   border: none;
@@ -34,32 +33,31 @@
   justify-content: center;
 }
 
-.heart-button::before {
+.perfect-heart-button::before {
   content: "";
   position: absolute;
   top: -30px;
   left: 0;
   width: 60px;
   height: 60px;
-  background-color: #ff4d6d;
+  background-color: red;
   border-radius: 50%;
 }
 
-.heart-button::after {
+.perfect-heart-button::after {
   content: "";
   position: absolute;
   top: 0;
   left: -30px;
   width: 60px;
   height: 60px;
-  background-color: #ff4d6d;
+  background-color: red;
   border-radius: 50%;
 }
 
 .music-icon {
-  transform: rotate(45deg);
   font-size: 24px;
-  color: black; /* 🔥 Black icon */
+  color: black; /* 🎵 Black icon */
   position: relative;
   z-index: 2;
 }
