@@ -17,50 +17,53 @@
 
 <style>
   .heart-button {
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
-    width: 70px;
-    height: 60px;
-    position: relative;
+    position: absolute;
+    bottom: 30px;
+    right: 25px;
+    width: 50px;
+    height: 45px;
+    background-color: #ff4d6d;
     transform: rotate(-45deg);
+    border-radius: 15px 15px 0 0;
+    box-shadow: 0 4px 12px rgba(255, 77, 109, 0.6);
     cursor: pointer;
-    box-shadow: 0 4px 15px rgba(255, 105, 180, 0.6);
+    z-index: 1000;
+    transition: transform 0.3s ease;
     border: none;
-    transition: all 0.3s ease-in-out;
   }
 
   .heart-button::before,
   .heart-button::after {
     content: "";
-    background: linear-gradient(135deg, #ff69b4, #ff1493);
-    border-radius: 50%;
     position: absolute;
-    width: 70px;
-    height: 70px;
+    width: 50px;
+    height: 45px;
+    background-color: #ff4d6d;
+    border-radius: 50%;
   }
 
   .heart-button::before {
-    top: -35px;
+    top: -25px;
     left: 0;
   }
 
   .heart-button::after {
-    left: 35px;
     top: 0;
-  }
-
-  .heart-icon {
-    transform: rotate(45deg);
-    font-size: 24px;
-    color: white;
-    position: absolute;
-    top: 15px;
-    left: 23px;
-    pointer-events: none;
+    left: 25px;
   }
 
   .heart-button:hover {
-    scale: 1.1;
-    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.8);
+    transform: rotate(-45deg) scale(1.1);
+  }
+
+  .heart-icon {
+    font-size: 18px;
+    transform: rotate(45deg);
+    color: white;
+    position: absolute;
+    top: 12px;
+    left: 15px;
+    pointer-events: none;
   }
 </style>
 
