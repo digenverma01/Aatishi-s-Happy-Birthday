@@ -16,56 +16,13 @@
 </audio>
 
 <style>
-  .heart-button {
-    position: absolute;
-    bottom: 30px;
-    right: 25px;
-    width: 50px;
-    height: 45px;
-    background-color: #ff4d6d;
-    transform: rotate(-45deg);
-    border-radius: 15px 15px 0 0;
-    box-shadow: 0 4px 12px rgba(255, 77, 109, 0.6);
-    cursor: pointer;
-    z-index: 1000;
-    transition: transform 0.3s ease;
-    border: none;
-  }
+<script>
+  const audio = document.getElementById("birthday-audio");
 
-  .heart-button::before,
-  .heart-button::after {
-    content: "";
-    position: absolute;
-    width: 50px;
-    height: 45px;
-    background-color: #ff4d6d;
-    border-radius: 50%;
-  }
-
-  .heart-button::before {
-    top: -25px;
-    left: 0;
-  }
-
-  .heart-button::after {
-    top: 0;
-    left: 25px;
-  }
-
-  .heart-button:hover {
-    transform: rotate(-45deg) scale(1.1);
-  }
-
-  .heart-icon {
-    font-size: 18px;
-    transform: rotate(45deg);
-    color: white;
-    position: absolute;
-    top: 12px;
-    left: 15px;
-    pointer-events: none;
-  }
-</style>
+  document.body.addEventListener("click", function () {
+    audio.play();
+  }, { once: true }); // Music will play only once on first click
+	  </script>
 
 <button class="heart-button" onclick="document.getElementById('birthday-audio').play()">
   <span class="heart-icon">🎵</span>
